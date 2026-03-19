@@ -1,8 +1,8 @@
 {
   "name": "PersistentLog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ring buffer logger with automatic rotation on LittleFS/SPIFFS. Persistent across reboots. Printf-style API.",
-  "keywords": ["logging", "persistent", "ring-buffer", "littlefs", "spiffs", "flash", "debug", "esp32"],
+  "keywords": ["logging", "log", "persistent", "ring-buffer", "ringbuffer", "littlefs", "spiffs", "flash", "debug", "esp32", "device-log", "crash-log"],
   "repository": {
     "type": "git",
     "url": "https://github.com/derekbreden/PersistentLog.git"
