@@ -1,6 +1,17 @@
 #include "PersistentLog.h"
 #include <stdarg.h>
 
+// RP2040 Earle Philhower core uses string modes, not ESP-IDF defines
+#ifndef FILE_READ
+#define FILE_READ "r"
+#endif
+#ifndef FILE_WRITE
+#define FILE_WRITE "w"
+#endif
+#ifndef FILE_APPEND
+#define FILE_APPEND "a"
+#endif
+
 PersistentLog::PersistentLog(fs::FS &fs, const char *path, uint32_t maxBytes)
     : _fs(fs), _path(path), _maxBytes(maxBytes), _currentSize(0), _begun(false), _tsCb(nullptr) {
 #ifdef ESP32
